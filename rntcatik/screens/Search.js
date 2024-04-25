@@ -49,7 +49,7 @@ const Search = () => {
   };
 
   const getFilms = async () => {
-    const query = searchText.trim().replace(/\s+/g, "");
+    const query = searchText.trim().replace(/\s+/g, " ");
     const url = `https://imdb188.p.rapidapi.com/api/v1/searchIMDB?query=${query}`;
     const options = {
       method: "GET",

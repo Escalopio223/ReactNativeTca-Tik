@@ -30,10 +30,12 @@ const FilmsList = ({ items }) => {
               style={styles.imageContainer}
               onPress={() => handleFilm(item)}
             >
-              <Image
-                source={item.image ? { uri: item.image } : ""}
-                style={styles.image}
-              />
+              {item.image && (
+                <Image
+                  source={{uri: item.image}}
+                  style={styles.image}
+                />
+              )}
             </TouchableOpacity>
           );
         })}
